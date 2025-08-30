@@ -8,42 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 250 100% 99%;
-    --foreground: 230 15% 15%;
+    --background: 0 0% 100%;
+    --foreground: 220 9% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 230 15% 15%;
+    --card-foreground: 220 9% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 230 15% 15%;
+    --popover-foreground: 220 9% 9%;
 
-    --primary: 245 75% 58%;
+    --primary: 185 100% 42%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 250 85% 70%;
+    --primary-glow: 185 100% 65%;
 
-    --secondary: 248 25% 96%;
-    --secondary-foreground: 230 15% 25%;
+    --secondary: 220 6% 96%;
+    --secondary-foreground: 220 9% 25%;
 
-    --muted: 248 25% 96%;
-    --muted-foreground: 230 10% 50%;
+    --muted: 220 6% 98%;
+    --muted-foreground: 220 4% 46%;
 
-    --accent: 250 85% 70%;
-    --accent-foreground: 230 15% 15%;
+    --accent: 78 100% 50%;
+    --accent-foreground: 220 9% 9%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 248 15% 88%;
-    --input: 248 15% 92%;
-    --ring: 245 75% 58%;
+    --border: 220 6% 92%;
+    --input: 220 6% 96%;
+    --ring: 185 100% 42%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(245 75% 58%), hsl(270 70% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(250 85% 70%), hsl(260 80% 75%));
-    --gradient-hero: linear-gradient(135deg, hsl(245 75% 58%) 0%, hsl(270 70% 65%) 50%, hsl(290 65% 70%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(185 100% 42%), hsl(78 100% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(185 100% 65%), hsl(78 100% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(185 100% 42%) 0%, hsl(78 100% 50%) 100%);
     
-    --shadow-elegant: 0 4px 20px -4px hsl(245 75% 58% / 0.15);
-    --shadow-card: 0 2px 12px -2px hsl(230 15% 15% / 0.08);
-    --shadow-float: 0 8px 30px -8px hsl(245 75% 58% / 0.25);
+    --shadow-elegant: 0 4px 20px -4px hsl(185 100% 42% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(220 9% 9% / 0.06);
+    --shadow-float: 0 8px 30px -8px hsl(185 100% 42% / 0.20);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
