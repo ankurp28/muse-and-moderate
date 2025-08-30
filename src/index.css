@@ -8,33 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 250 100% 99%;
+    --foreground: 230 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 230 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 230 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 245 75% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 250 85% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 248 25% 96%;
+    --secondary-foreground: 230 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 248 25% 96%;
+    --muted-foreground: 230 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 250 85% 70%;
+    --accent-foreground: 230 15% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 248 15% 88%;
+    --input: 248 15% 92%;
+    --ring: 245 75% 58%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(245 75% 58%), hsl(270 70% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(250 85% 70%), hsl(260 80% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(245 75% 58%) 0%, hsl(270 70% 65%) 50%, hsl(290 65% 70%) 100%);
+    
+    --shadow-elegant: 0 4px 20px -4px hsl(245 75% 58% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(230 15% 15% / 0.08);
+    --shadow-float: 0 8px 30px -8px hsl(245 75% 58% / 0.25);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -101,5 +112,47 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-foreground;
+    line-height: 1.3;
+  }
+
+  h1 { @apply text-3xl md:text-4xl lg:text-5xl; }
+  h2 { @apply text-2xl md:text-3xl; }
+  h3 { @apply text-xl md:text-2xl; }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card-elegant {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+
+  .card-elegant:hover {
+    box-shadow: var(--shadow-float);
+    transform: translateY(-2px);
+  }
+
+  .btn-gradient {
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    border: none;
+    transition: var(--transition-smooth);
+  }
+
+  .btn-gradient:hover {
+    background: var(--gradient-secondary);
+    box-shadow: var(--shadow-elegant);
+    transform: translateY(-1px);
   }
 }
